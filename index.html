@@ -34,24 +34,24 @@
 
 </head>
 
-<body>
+<body id="color1">
 
 <div class="container-fluid">
     <div class="row">
         <div class="jumbotron col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 jumbo_margin">
-            <div class="quote" align="center">
+            <div class="quote" align="center" id="color2">
                 <h1 id="message">"I am present"</h1>
             </div>
             <br/>
             <br/>
             <div class="btn-group pull-right">
-                <input class="btn btn-primary btn-md button_color" type="button" id="btnSearch" value="New Mantra"
+                <input class="btn btn-primary btn-md button_color color5" type="button" id="btnSearch" value="New Mantra"
                        onclick="GetValue();"/>
             </div>
             <div class="btn-group pull-left">
-                <p><a id="twitter" class="btn btn-primary btn-md button_color social" target="_blank" href = "http://twitter.com/home?status=I got my mantra for the day, get yours: http://goo.gl/qcPRVq"><i
+                <p><a id="color3" class="btn btn-primary btn-md button_color social" target="_blank" href = "http://twitter.com/home?status=I got my mantra for the day, get yours: http://goo.gl/qcPRVq"><i
                         class="fa fa-twitter"></i></a>
-                    <a class="btn btn-primary btn-md button_color social" target="_blank" href="http://www.facebook.com/sharer.php?u=http://goo.gl/qcPRVq" role="button"><i
+                    <a id="color4" class="btn btn-primary btn-md button_color social" target="_blank" href="http://www.facebook.com/sharer.php?u=http://goo.gl/qcPRVq" role="button"><i
                             class="fa fa-facebook"></i></a>
                 </p>
             </div>
@@ -60,19 +60,28 @@
 </div>
 
 <div class="footer">
-    <p align="center"><a href="http://jspeek.me">Made with <span style="color:pink"><i
-            class="fa fa-heart"></i></span> by Jonathan Speek</a></p>
+    <p align="center"><a href="http://jspeek.me">Made with <i
+            class="fa fa-heart"></i> by Jonathan Speek</a></p>
 </div>
 </body>
 
 <footer>
     <script type="text/javascript">
         function GetValue() {
-            var myarray = new Array('"I Believe"', '"I am open"', '"Go with the Flow"', '"A peaceful mind generates power"',
+            var myarray = ['"I Believe"', '"I am open"', '"Go with the Flow"', '"A peaceful mind generates power"',
                     '"Connect"', '"Be kind, for everyone you meet is fighting a hard battle"', '"Listen"', '"Be here now"',
-                    '"Embark"', '"Flow"', '"Be kind, always"');
+                    '"Embark"', '"Flow"', '"Be kind, always"', '"Be content"', '"I am balanced"', '"I am grateful"', '"Breath gratitude"', '"Just be"'];
             var random = myarray[Math.floor(Math.random() * myarray.length)];
             document.getElementById("message").innerHTML = random;
+            var myColors = ["#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c",
+            "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#7f8c8d"];
+            var num = Math.floor(Math.random() * myColors.length);
+            var color = myColors[num];
+            document.getElementById("color1").style.backgroundColor = color;
+            document.getElementById("color2").style.color = color;
+            document.getElementById("color3").style.backgroundColor = color;
+            document.getElementById("color4").style.backgroundColor = color;
+            document.getElementsByClassName("color5")[0].style.backgroundColor = color;
         }
     </script>
 </footer>
