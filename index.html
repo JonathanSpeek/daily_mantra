@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta property="og:url" content="http://www.mantra.jspeek.me"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Daily Mantras"/>
+    <meta property="og:description" content="Enlighten your day with a daily mantra"/>
+
 
     <title>Daily Mantra</title>
 
@@ -45,13 +50,16 @@
             <br/>
             <br/>
             <div class="btn-group pull-right">
-                <input class="btn btn-primary btn-md button_color color5" type="button" id="btnSearch" value="New Mantra"
+                <input class="btn btn-primary btn-md button_color color5" type="button" id="btnSearch"
+                       value="New Mantra"
                        onclick="GetValue();"/>
             </div>
             <div class="btn-group pull-left">
-                <p><a id="color3" class="btn btn-primary btn-md button_color social" target="_blank" href = "http://twitter.com/home?status=I got my mantra for the day, get yours: http://goo.gl/qcPRVq"><i
+                <p><a id="color3" class="btn btn-primary btn-md button_color social" target="_blank" 
+                      href="http://twitter.com/home?status=I got my mantra for the day, get yours: http://goo.gl/qcPRVq"><i
                         class="fa fa-twitter"></i></a>
-                    <a id="color4" class="btn btn-primary btn-md button_color social" target="_blank" href="http://www.facebook.com/sharer.php?u=http://goo.gl/qcPRVq" role="button"><i
+                    <a id="color4" class="btn btn-primary btn-md button_color social"
+                       href="https://www.facebook.com/sharer/sharer.php?u=mantra.jspeek.me" target="_blank" role="button"><i
                             class="fa fa-facebook"></i></a>
                 </p>
             </div>
@@ -69,13 +77,13 @@
     <script type="text/javascript">
         function GetValue() {
             var myarray = ['"I Believe"', '"I am open"', '"Go with the Flow"', '"A peaceful mind generates power"',
-                    '"Connect"', '"Be kind, for everyone you meet is fighting a hard battle"', '"Listen"', '"Be here now"',
-                    '"Embark"', '"Flow"', '"Be kind, always"', '"Be content"', '"I am balanced"', '"I am grateful"',
-                '"Breath gratitude"', '"Just be"', '"I am willing"', '"Let it go"', '"I am enough"', '"Make people happy"'];
+                '"Connect"', '"Be kind, for everyone you meet is fighting a hard battle"', '"Listen"', '"Be here now"',
+                '"Embark"', '"Flow"', '"Be kind, always"', '"Be content"', '"I am balanced"', '"I am grateful"',
+                '"Breathe gratitude"', '"Just be"', '"I am willing"', '"Let it go"', '"I am enough"', '"Make people happy"'];
             var random = myarray[Math.floor(Math.random() * myarray.length)];
             document.getElementById("message").innerHTML = random;
             var myColors = ["#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c",
-            "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#7f8c8d"];
+                "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#7f8c8d"];
             var num = Math.floor(Math.random() * myColors.length);
             var color = myColors[num];
             document.getElementById("color1").style.backgroundColor = color;
@@ -85,7 +93,7 @@
             document.getElementsByClassName("color5")[0].style.backgroundColor = color;
         }
     </script>
+
 </footer>
 
 </html>
-
