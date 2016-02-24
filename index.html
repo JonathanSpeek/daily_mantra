@@ -45,12 +45,13 @@
             <br/>
             <br/>
             <div class="btn-group pull-right">
-                <input class="btn btn-primary btn-md button_color" type="button" id="btnSearch" value="New Mantra" onclick="GetValue();" />
+                <input class="btn btn-primary btn-md button_color" type="button" id="btnSearch" value="New Mantra"
+                       onclick="GetValue();"/>
             </div>
             <div class="btn-group pull-left">
-                <p><a class="btn btn-primary btn-md button_color social" href="http://twitter.com/home?status=My mantra for the day:"><i
+                <p><a id="twitter" class="btn btn-primary btn-md button_color social" target="_blank" href = "http://twitter.com/home?status=I got my mantra for the day, get yours: http://goo.gl/qcPRVq"><i
                         class="fa fa-twitter"></i></a>
-                    <a class="btn btn-primary btn-md button_color social" href="#" role="button"><i
+                    <a class="btn btn-primary btn-md button_color social" target="_blank" href="http://www.facebook.com/sharer.php?u=http://goo.gl/qcPRVq" role="button"><i
                             class="fa fa-facebook"></i></a>
                 </p>
             </div>
@@ -68,8 +69,8 @@
     <script type="text/javascript">
         function GetValue() {
             var myarray = new Array('"I Believe"', '"I am open"', '"Go with the Flow"', '"A peaceful mind generates power"',
-            '"Connect"', '"Be kind, for everyone you meet is fighting a hard battle"', '"Listen"', '"Be here now"',
-            '"Embark"', '"Flow"', '"Be kind, always"');
+                    '"Connect"', '"Be kind, for everyone you meet is fighting a hard battle"', '"Listen"', '"Be here now"',
+                    '"Embark"', '"Flow"', '"Be kind, always"');
             var random = myarray[Math.floor(Math.random() * myarray.length)];
             document.getElementById("message").innerHTML = random;
         }
